@@ -1,4 +1,4 @@
-name: Self-Repo Syntax Test
+name: Self-Repo Syntax Test v2
 on: workflow_dispatch
 
 jobs:
@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Use self-repo action
-        uses: $/self-test
-      - name: Also try path form
+      - name: Use self-repo action (path form)
+        uses: $/.github/actions/self-test
+      - name: Also test ./ form
         uses: ./.github/actions/self-test
