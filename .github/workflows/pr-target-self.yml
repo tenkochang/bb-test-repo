@@ -1,0 +1,16 @@
+name: PR Target Self-Repo
+on:
+  pull_request_target:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (base repo)
+        uses: actions/checkout@v4
+      - name: Use self-repo action in PR_TARGET context
+        uses: $/.github/actions/self-test
+      - name: Show resolution
+        run: |
+          echo "REPO=$GITHUB_REPOSITORY REF=$GITHUB_REF"
+          echo "HEAD=$GITHUB_HEAD_REF BASE=$GITHUB_BASE_REF"
