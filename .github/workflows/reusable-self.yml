@@ -1,0 +1,16 @@
+name: Reusable Self-Repo
+on:
+  workflow_call:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout caller
+        uses: actions/checkout@v4
+      - name: Use self-repo action INSIDE reusable workflow
+        uses: $/.github/actions/self-test
+      - name: Show what repo we resolved to
+        run: |
+          echo "Running in: $GITHUB_REPOSITORY"
+          echo "SHA: $GITHUB_SHA"
