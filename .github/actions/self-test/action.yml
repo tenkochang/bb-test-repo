@@ -1,0 +1,16 @@
+name: 'Self Test Action'
+description: 'Test self-repository syntax'
+runs:
+  using: 'composite'
+  steps:
+    - name: Show context
+      shell: bash
+      run: |
+        echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
+        echo "GITHUB_REF=$GITHUB_REF"
+        echo "GITHUB_SHA=$GITHUB_SHA"
+        echo "GITHUB_HEAD_REF=$GITHUB_HEAD_REF"
+        echo "GITHUB_BASE_REF=$GITHUB_BASE_REF"
+        echo "whoami=$(whoami)"
+        echo "PWD=$(pwd)"
+        echo "TOKEN_PREFIX=$(echo $GITHUB_TOKEN | cut -c1-4)"

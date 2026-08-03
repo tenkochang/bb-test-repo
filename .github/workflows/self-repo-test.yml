@@ -1,0 +1,13 @@
+name: Self-Repo Syntax Test
+on: workflow_dispatch
+
+jobs:
+  test-self-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use self-repo action
+        uses: $/self-test
+      - name: Also try path form
+        uses: ./.github/actions/self-test
